@@ -1,5 +1,5 @@
 import { CATEGORIES,readingMinutes,selectStories,safeLoad,validIds,escapeHtml as esc,safeSourceUrl } from './core.js';
-import { EDITION } from './edition.js';
+import { EDITION } from './edition.js?v=20261030-2';
 
 const $=id=>document.getElementById(id);
 const key='xinliu:v1';
