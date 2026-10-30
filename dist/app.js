@@ -17,10 +17,10 @@ function theme(){document.documentElement.dataset.theme=state.theme;$('theme').s
 function applyFont(){document.documentElement.style.setProperty('--reader-size',state.fontSize+'px');$('font-down').disabled=state.fontSize<=16;$('font-up').disabled=state.fontSize>=26;}
 function categoryName(id){return CATEGORIES.find(c=>c.id===id)?.name||id;}
 function card(s,i){const read=state.readIds.includes(s.id),saved=state.savedIds.includes(s.id);return `<article class="story-card ${i===0&&!state.savedOnly&&state.category==='all'&&!state.query&&!state.unread?'featured':''}">
-  <div class="card-meta"><span class="section-label">${esc(categoryName(s.section))}</span><span>／</span><span>约${readingMinutes([s])}分钟</span><span class="card-number">${String(EDITION.stories.indexOf(s)+1).padStart(2,'0')}</span></div>
+  <div class="card-meta"><span class="section-label">${esc(categoryName(s.section))}</span><span>／</span><span>${esc(s.region||'')} · 约${readingMinutes([s])}分钟</span><span class="card-number">${String(EDITION.stories.indexOf(s)+1).padStart(2,'0')}</span></div>
   <h3 class="story-title"><button type="button" data-read="${esc(s.id)}">${esc(s.title.replace('【演示】',''))}</button></h3>
-  <p class="card-summary">${esc(s.paragraphs[0].length>62?s.paragraphs[0].slice(0,62)+'…':s.paragraphs[0])}</p>
-  <div class="card-footer"><span>${s.sources.length}个示例来源</span><span class="mini-dot"></span><span>含争议说明</span>${read?'<span class="mini-dot"></span><span class="read-status">✓ 已读</span>':''}<span class="card-arrow" aria-hidden="true">↗</span></div>
+  <p class="card-summary">${esc(s.summary)}</p>
+  <div class="card-footer"><span>${s.sources.length}项${EDITION.demo?'示例':'一手'}资料</span><span class="mini-dot"></span><span>${esc(s.freshness||'资料整理')}</span>${read?'<span class="mini-dot"></span><span class="read-status">✓ 已读</span>':''}<span class="card-arrow" aria-hidden="true">↗</span></div>
   <button class="save-button ${saved?'saved':''}" type="button" data-save="${esc(s.id)}" aria-label="${saved?'取消收藏':'收藏'}：${esc(s.title.replace('【演示】',''))}" aria-pressed="${saved}">${saved?'▣':'▢'}</button></article>`;}
 function render(){
   const selected=selectStories(EDITION.stories,state);
@@ -38,14 +38,15 @@ function render(){
   $('nav-edition').classList.toggle('active',!state.savedOnly);$('nav-saved').classList.toggle('active',state.savedOnly);
 }
 function section(title,body,extra=''){return `<section class="reader-section ${extra}"><h3>${title}</h3>${body}</section>`;}
+function citations(ids=[]){return ids.map(id=>`<a href="#source-${esc(id)}" class="source-cite" aria-label="查看来源${esc(id)}">[${esc(id)}]</a>`).join(' ');}
 function renderReader(){if(!activeStory)return;const s=activeStory;
-  $('reader-content').innerHTML=`<div class="eyebrow"><span class="section-label">${esc(categoryName(s.section))}</span> · 样刊阅读 · 约${readingMinutes([s])}分钟</div><h2 id="reader-title">${esc(s.title.replace('【演示】',''))}</h2>
-  <p class="reader-meta">样刊日期：${EDITION.date} · 更新：${esc(s.updatedAt.replace('T',' ').replace('+08:00',' UTC+8'))}</p><div class="reader-demo"><strong>原创演示材料，不是真实新闻。</strong><br>AI辅助生成；下列来源、作者与审核记录均为虚构占位，不可作为事实依据。</div>
+  $('reader-content').innerHTML=`<div class="eyebrow"><span class="section-label">${esc(categoryName(s.section))}</span> · ${esc(s.region||'')} · ${esc(s.freshness||'资料整理')} · 约${readingMinutes([s])}分钟</div><h2 id="reader-title">${esc(s.title.replace('【演示】',''))}</h2>
+  <p class="reader-meta">本期日期：${esc(EDITION.date)} · 主要资料/事件日期：${esc(s.eventDate||'见来源')}<br>整理更新：${esc(s.updatedAt.replace('T',' ').replace(/\+08:00$/,' UTC+8'))}</p><div class="reader-demo"><strong>${EDITION.demo?'原创演示材料，不是真实新闻。':'AI检索与原创综合 · 非独立采访'}</strong><br>${esc(s.attributionNote||'来源及审核记录为虚构占位。')}</div>
   ${section('01 / 概要',`<p>${esc(s.summary)}</p>`)}
-  ${section('02 / 事实与背景',s.paragraphs.map(p=>`<p>${esc(p)}</p>`).join(''))}
-  ${s.perspectives.map(p=>section('03 / '+esc(p.label),`<p>${esc(p.text)}</p><p class="evidence">示例依据：${esc(p.sourceIds.join('、'))}</p>`,'perspective')).join('')}
+  ${section('02 / 事实与背景',s.paragraphs.map((p,i)=>`<p>${esc(p)} ${citations(s.paragraphSources?.[i]||[])}</p>`).join(''))}
+  ${s.perspectives.map(p=>section('03 / '+esc(p.label),`<p>${esc(p.text)} ${citations(p.sourceIds)}</p>${p.sourceIds.length?'':'<p class="evidence">信流分析 · 不是受访者发言</p>'}`,'perspective')).join('')}
   ${section('04 / 尚不确定',`<p>${esc(s.uncertainty)}</p>`)}
-  ${section('05 / 来源与原文',s.sources.map(src=>`<div class="source-item"><strong>${esc(src.publisher)}</strong> · ${esc(src.author)}<p>${esc(src.title)}<br>来源编号 ${esc(src.id)}<br>发布时间 ${esc(src.publishedAt)}<br>检索时间 ${esc(src.retrievedAt)}</p>${safeSourceUrl(src.url)?`<a href="${esc(safeSourceUrl(src.url))}" target="_blank" rel="noopener noreferrer">查看示例占位链接 ↗</a>`:'<span>来源链接不可用</span>'}</div>`).join(''))}
+  ${section('05 / 原始资料与检索记录',s.sources.map(src=>`<div class="source-item" id="source-${esc(src.id)}"><strong>[${esc(src.id)}] ${esc(src.publisher)}</strong><p>${esc(src.title)}<br>资料日期 ${esc(src.publishedAt||'页面未标注')}<br>检索时间 ${esc(src.retrievedAt)}${src.note?'<br>资料说明：'+esc(src.note):''}</p>${safeSourceUrl(src.url)?`<a href="${esc(safeSourceUrl(src.url))}" target="_blank" rel="noopener noreferrer">阅读原始资料 ↗</a>`:'<span>来源链接不可用</span>'}</div>`).join(''))}
   <div class="reader-actions"><button id="mark-read" type="button">${state.readIds.includes(s.id)?'✓ 已读 · 点击撤销':'读完了，标记已读'}</button><button id="reader-save" type="button">${state.savedIds.includes(s.id)?'▣ 已收藏':'▢ 收藏这篇'}</button></div>`;
   $('mark-read').onclick=()=>{const isRead=state.readIds.includes(s.id);state.readIds=isRead?state.readIds.filter(id=>id!==s.id):[...state.readIds,s.id];persist();render();renderReader();$('mark-read').focus();toast(isRead?'已取消已读标记':'已保存阅读进度。');};
   $('reader-save').onclick=()=>{toggleSave(s.id);renderReader();$('reader-save').focus();};
@@ -64,4 +65,6 @@ $('font-up').onclick=()=>{state.fontSize=Math.min(26,state.fontSize+1);applyFont
 $('theme').onclick=()=>{state.theme=state.theme==='dark'?'light':'dark';theme();render();persist();};
 $('clear-data').onclick=()=>$('clear-dialog').showModal();$('clear-cancel').onclick=()=>$('clear-dialog').close();$('clear-confirm').onclick=()=>{let success=true;try{storage.removeItem(key);}catch{success=false;}state.readIds=[];state.savedIds=[];state.fontSize=19;state.theme='light';theme();applyFont();render();$('clear-dialog').close();toast(success?'已清除信流在这个浏览器保存的数据。':'页面记录已重置；浏览器存储不可访问。');};
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!document.querySelector('dialog[open]')&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();$('search').focus();}});
-$('edition-date').textContent=EDITION.date.replaceAll('-','.');$('minutes').textContent=readingMinutes(EDITION.stories);theme();applyFont();render();
+$('edition-date').textContent=EDITION.date.replaceAll('-','.');$('minutes').textContent=readingMinutes(EDITION.stories);
+$('reader-total').textContent='/ '+EDITION.stories.length+' 篇';$('issue-label').textContent=EDITION.issueLabel||'简报';$('issue-number').textContent='NO. '+(EDITION.issueNumber||'001');
+$('notice-text').textContent=EDITION.notice;theme();applyFont();render();
