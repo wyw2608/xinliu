@@ -1,0 +1,9 @@
+{
+  "name": "xinliu",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "信流：有边界的每日新闻简报，网页版产品演示",
+  "scripts": {"test": "node --test", "start": "node preview.mjs"},
+  "engines": {"node": ">=22"}
+}
