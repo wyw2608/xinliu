@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="信流，一份有边界的每日简报。时政、AI、社会热点与艺术，读懂一天，然后回到生活。当前为产品演示。">
+  <title>信流 · 读懂一天</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到内容</a>
+  <header class="header"><div class="header-inner">
+    <a class="brand" href="./" aria-label="信流首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>信流</span><small>XINLIU</small></a>
+    <nav aria-label="主导航"><button class="nav-button active" id="nav-edition" type="button">本期简报</button><button class="nav-button" id="nav-saved" type="button">我的收藏 <span id="saved-count">0</span></button><button class="nav-button" id="nav-about" type="button">关于信流 <span aria-hidden="true">↗</span></button></nav>
+    <button id="theme" class="icon-button" type="button" aria-label="切换深色模式" title="切换深色模式">◐</button>
+  </div></header>
+  <main id="main" class="shell">
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro-copy"><div class="eyebrow"><span class="live-dot"></span>一份有边界的每日简报 <span class="demo-tag">产品演示</span></div>
+      <h1 id="intro-title">读懂一天，<br>然后回到<span>生活。</span></h1>
+      <p>重要的事，值得好好理解。<br class="mobile-break">四个栏目，多一点背景，少一点信息噪声。</p>
+      <div class="intro-bottom"><span>样刊 <b id="edition-date">2026.10.30</b></span><span>NO. 001</span><span>中文 · 原创演示材料</span></div></div>
+      <aside class="daily-note"><div class="note-top"><span>你的今日份阅读</span><span aria-hidden="true">↗</span></div><div class="note-middle"><div class="progress-ring" id="progress-ring"><span><b id="read-count">0</b><small>/ 8 篇</small></span></div><div><strong>不必读完世界，<br>只读值得的部分。</strong><p>样刊约 <b id="minutes">5</b> 分钟<br>正式日报目标 20 分钟</p></div></div><div class="progress-track"><i id="progress-bar"></i></div><p class="note-foot" id="progress-note">从一篇开始，慢慢读。</p></aside>
+    </section>
+    <div class="demo-notice"><span class="notice-symbol" aria-hidden="true">i</span><p><strong>你正在浏览产品样刊。</strong> 所有条目都是原创说明，来源为虚构占位，不是真实当日新闻；尚未接入自动日更和推送。</p><button type="button" id="notice-about">了解内容原则 <span aria-hidden="true">↗</span></button></div>
+    <section class="reading-area" aria-label="简报阅读区">
+      <aside class="sidebar"><div class="sidebar-title">阅读目录 <span>CONTENTS</span></div><div id="categories" class="categories" role="group" aria-label="栏目筛选"></div><div class="sidebar-rule"></div><label class="unread-label"><input id="unread" type="checkbox">只看未读<span id="unread-count">8</span></label><div class="editor-note"><span>编者的话</span><p>事实、观点与未知，<br>都应该有自己的位置。</p><button id="editor-about" type="button">我们的编辑原则 ↗</button></div><div class="sidebar-bottom">每天一份 · 读完即止<br>TAKE YOUR TIME.</div></aside>
+      <div class="content"><div class="content-toolbar"><div><h2 id="list-title">本期精选 <span>THE BRIEFING</span></h2><p id="result-count">8 篇内容 · 按栏目编排</p></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索本期内容" aria-label="搜索本期内容" maxlength="100"><kbd>/</kbd></label></div><div id="cards" class="cards"></div><div id="empty" class="empty" hidden><span aria-hidden="true">○</span><h3 id="empty-title">暂时没有匹配的内容</h3><p id="empty-text">换一个关键词，或试试其他栏目。</p><button id="reset-filters" type="button">查看本期全部内容</button></div><div class="end-note"><span>✳</span><p id="end-text">阅读有尽头，思考没有。</p><small>本期到这里。把剩下的时间，留给生活。</small></div></div>
+    </section>
+  </main>
+  <footer class="footer"><a class="footer-brand" href="./">信流 <small>让信息流向理解。</small></a><p>阅读记录与收藏仅保存在当前浏览器。</p><div><button id="clear-data" type="button">清除本地数据</button><a href="https://github.com/wyw2608/xinliu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+  <dialog id="reader" aria-labelledby="reader-title"><div class="reader-chrome"><span class="reader-brand">信流 / 阅读</span><div><button id="font-down" type="button" class="icon-button" aria-label="缩小字号">A−</button><button id="font-up" type="button" class="icon-button" aria-label="增大字号">A+</button><button id="reader-close" class="icon-button close" type="button" aria-label="关闭阅读">×</button></div></div><article id="reader-content"></article></dialog>
+  <dialog id="about" aria-labelledby="about-title"><div class="about-top"><span class="eyebrow">ABOUT XINLIU</span><button id="about-close" class="icon-button close" type="button" aria-label="关闭关于信流">×</button></div><h2 id="about-title">信息有尽头，<br>理解有余地。</h2><p class="about-lead">信流想成为每天约20分钟的新闻阅读习惯：时政、AI、社会热点与艺术，重要的信息，完整的语境。</p><div class="principles"><section><span>01</span><div><h3>追溯来源</h3><p>正式内容保留发布者、作者、原文、发布时间与检索时间。多个转载页面不等于多个独立来源。</p></div></section><section><span>02</span><div><h3>认真呈现争议</h3><p>区分已核实的事实、各方观点和未知。按证据分量呈现，不为争议制造虚假的对等；重要争议需要独立来源和人工复核。</p></div></section><section><span>03</span><div><h3>尊重内容与读者</h3><p>来源可访问不等于获得转载、摘要、图片或离线授权。正式日更需要合适的内容许可与运营条件。阅读进度与收藏仅保存在本机，无广告或行为统计。</p></div></section></div><div class="about-status"><strong>当前版本：静态产品演示</strong><p>不提供真实新闻日更或后台推送。示例为AI辅助生成的原创说明，来源及审核记录为虚构占位。演示阅读量约5分钟，正式产品目标20分钟。外链由原网站处理，适用其隐私规则。</p></div><a class="primary-link" href="https://github.com/wyw2608/xinliu" target="_blank" rel="noopener noreferrer">查看源码与实施文档 ↗</a></dialog>
+  <dialog id="clear-dialog" aria-labelledby="clear-title" class="confirm-dialog"><h2 id="clear-title">清除这个浏览器的数据？</h2><p>收藏、已读进度、字号和主题设置将被清除。网站内容不受影响。</p><div><button id="clear-cancel" type="button">保留数据</button><button id="clear-confirm" type="button" class="danger">确认清除</button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">信流需要启用 JavaScript 才能显示简报和保存阅读进度。</p></noscript>
+</body>
+</html>
