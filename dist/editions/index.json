@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "latest": "2026-10-31",
+  "editions": [
+    {
+      "date": "2026-10-31",
+      "issueNumber": "003",
+      "version": 1,
+      "path": "./editions/2026-10-31.json",
+      "title": "读见今天，走进卑尔根",
+      "city": "卑尔根 · 挪威"
+    },
+    {
+      "date": "2026-10-30",
+      "issueNumber": "002",
+      "version": 2,
+      "path": "./editions/2026-10-30.json",
+      "title": "AI与就业，世界经济与文化现场",
+      "city": null
+    }
+  ]
+}

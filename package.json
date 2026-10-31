@@ -1,9 +1,9 @@
 {
   "name": "xinliu",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
-  "description": "信流：有边界的每日新闻简报，网页版产品演示",
+  "description": "信流：中外资讯与城市介绍，支持按日期阅读",
   "scripts": {"test": "node --test", "start": "node preview.mjs"},
   "engines": {"node": ">=22"}
 }

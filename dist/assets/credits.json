@@ -1,0 +1,46 @@
+{
+  "city": "卑尔根",
+  "country": "挪威",
+  "verifiedAt": "2026-10-31",
+  "license": "Pexels License",
+  "licenseUrl": "https://www.pexels.com/license/",
+  "licenseVerified": true,
+  "photos": [
+    {
+      "file": "bergen-bryggen-pexels.jpg",
+      "width": 1280,
+      "height": 852,
+      "author": "Nguyen Ngoc Tien",
+      "sourcePage": "https://www.pexels.com/photo/colorful-bryggen-wharf-in-bergen-norway-33973612/",
+      "downloadUrl": "https://images.pexels.com/photos/33973612/pexels-photo-33973612.jpeg?auto=compress&cs=tinysrgb&w=1280",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "capturedAt": "2025-09-06",
+      "alt": "卑尔根布吕根码头的彩色木屋与靠岸船只，身后是绿山。",
+      "caption": "布吕根码头，木屋与船只沿港湾排开。",
+      "credit": "摄影：Nguyen Ngoc Tien / Pexels，2025年摄。",
+      "changes": "Pexels提供的等比压缩缩略图；未作内容修改。",
+      "downloadVerified": true,
+      "visualVerified": true
+    },
+    {
+      "file": "bergen-lake-pexels.jpg",
+      "width": 1280,
+      "height": 853,
+      "author": "Zachary Baltimore",
+      "sourcePage": "https://www.pexels.com/photo/scenic-view-of-mount-floyen-in-bergen-norway-32129239/",
+      "downloadUrl": "https://images.pexels.com/photos/32129239/pexels-photo-32129239.jpeg?auto=compress&cs=tinysrgb&w=1280",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "capturedAt": null,
+      "alt": "卑尔根城市湖畔的喷泉、绿地与身后的山峦。",
+      "caption": "城市湖畔，山峦就在日常生活的身后。",
+      "credit": "摄影：Zachary Baltimore / Pexels。资料照片。",
+      "changes": "Pexels提供的等比压缩缩略图；未作内容修改。",
+      "downloadVerified": true,
+      "visualVerified": true,
+      "editorNote": "页面将背景山标为Mount Fløyen，但照片中的山顶天线可能为乌尔里肯；城市地点Bergen明确，正文和caption不沿用未经进一步核实的具体山名。"
+    }
+  ],
+  "licenseNotes": "两张照片的具体详情页均显示Free download / Free to use，地点为Bergen, Norway。Pexels官方许可允许免费在网站和应用中使用、可修改；不要求署名，但本项目保留摄影师和来源。不得暗示图中人物或品牌为信流背书，亦不作图库转售或商标使用。"
+}

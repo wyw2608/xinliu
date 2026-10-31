@@ -1,0 +1,624 @@
+{
+  "schemaVersion": 3,
+  "id": "xinliu-2026-10-31",
+  "date": "2026-10-31",
+  "timezone": "Asia/Shanghai",
+  "version": 1,
+  "demo": false,
+  "publishedAt": "2026-10-31T11:02:44+08:00",
+  "updatedAt": "2026-10-31T11:02:44+08:00",
+  "issueLabel": "每日简报",
+  "issueNumber": "003",
+  "intro": "十月在雨声中收尾。读一组新的景气数据，看看技术与自然的进展，再把脚步交给挪威西岸的山海。",
+  "editorialMethod": "检索一手资料，原创综合；文中注号可追溯来源。",
+  "sourceCount": 22,
+  "generation": {
+    "mode": "web_researched_original",
+    "automatedDaily": false,
+    "cutoffAt": "2026-10-31T11:02:44+08:00",
+    "primaryOnly": true
+  },
+  "stories": [
+    {
+      "id": "20261031-cn-affairs",
+      "section": "affairs",
+      "region": "中国",
+      "title": "十月制造业景气回落，订单与生产同步放缓",
+      "summary": "制造业PMI回到50以下，中小企业承压更明显。新订单和生产指数一同下降，接下来需要观察需求能否回稳。",
+      "paragraphs": [
+        "国家统计局今天公布，10月制造业采购经理指数为49.3%，较上月下降0.8个百分点。生产指数降至49.8%，新订单指数降至49.4%，供需两端同时放缓。大型企业PMI仍在50以上，中、小型企业则分别为48.4%和47.5%。",
+        "九月制造业PMI曾升至50.1%，此次再度落到临界点以下。PMI来自企业采购经理的月度调查，50是判断较上月扩张或收缩的界线，反映的是景气方向；49.3并不等于工业产出减少了0.7%。"
+      ],
+      "paragraphSources": [
+        [
+          "CN1"
+        ],
+        [
+          "CN1",
+          "CN2"
+        ]
+      ],
+      "perspectives": [
+        {
+          "label": "信流观察",
+          "text": "读这组数字，可以先看订单，再看生产与用工。它们能帮助辨认企业面对需求时如何安排经营，也让总量之下的大、中、小企业差异浮出水面。下一步，需求的修复能否传导到生产，是值得继续追踪的线索。",
+          "sourceIds": []
+        }
+      ],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "CN1",
+          "publisher": "国家统计局",
+          "title": "2026年10月中国采购经理指数运行情况",
+          "url": "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261031_1965718.html",
+          "publishedAt": "2026-10-31",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": ""
+        },
+        {
+          "id": "CN2",
+          "publisher": "国家统计局",
+          "title": "2026年9月中国采购经理指数运行情况",
+          "url": "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260930_1965449.html",
+          "publishedAt": "2026-09-30",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": ""
+        }
+      ],
+      "eventDate": "2026-10-31",
+      "freshness": "今日发布",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-world-affairs",
+      "section": "affairs",
+      "region": "国际",
+      "title": "海上的AI，既要看得更远，也要有人掌舵",
+      "summary": "安理会讨论新技术与海事安全。AI、无人系统可以守护航线，也会带来新风险；人的监督与跨国协作成为发言中的共同关切。",
+      "paragraphs": [
+        "10月29日，联合国安理会就新技术与海事安全举行公开辩论。港口、商船和海底电缆相互连接，海上的安全也关乎岸上的通信、能源与食物供应。欧盟代表在发言中提出，港口数字化和无人系统的扩散，正在改变风险的形态。",
+        "挪威代表北欧五国发言时，同样把海底基础设施放在重要位置：AI可以用于监测、预警和态势感知，但网络攻击、卫星导航干扰与自主系统的恶意使用也会扩大脆弱性。北欧方面主张加强共同标准、能力建设和包容性治理。",
+        "这场讨论的要点，在于把技术能力与责任同时摆上桌面。欧盟要求海事AI保持人的监督，并遵守国际法；北欧发言则强调政府、行业与国际组织合作。更快发现危险只是第一步，如何共享信息、确认责任和避免升级，同样决定海上新技术的价值。"
+      ],
+      "paragraphSources": [
+        [
+          "W1"
+        ],
+        [
+          "W2"
+        ],
+        [
+          "W1",
+          "W2"
+        ]
+      ],
+      "perspectives": [],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "W1",
+          "publisher": "欧盟对外行动署（EEAS）",
+          "title": "EU Statement – UN Security Council: Emerging Technologies and Maritime Security",
+          "url": "https://www.eeas.europa.eu/delegations/un-new-york/eu-statement-un-security-council-emerging-technologies-and-maritime-security_en?s=63",
+          "publishedAt": "2026-10-29",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "欧盟代表发言。"
+        },
+        {
+          "id": "W2",
+          "publisher": "挪威常驻联合国代表团",
+          "title": "SC: Emerging technologies and maritime security",
+          "url": "https://www.norway.no/en/missions/un/statements/sc-emerging-technologies-and-maritime-security/",
+          "publishedAt": "2026-10-29",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "挪威代表北欧五国发言。"
+        }
+      ],
+      "eventDate": "2026-10-29",
+      "freshness": "近期议题",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-cn-ai",
+      "section": "ai",
+      "region": "中国",
+      "title": "深度合成算法名录更新，让生成服务有迹可循",
+      "summary": "网信办公布第十九批深度合成服务算法备案信息。对使用者而言，查清服务背后的主体，也是在理解AI的一部分。",
+      "paragraphs": [
+        "国家网信办昨晚公开第十九批境内深度合成服务算法备案信息，并提供2026年10月清单。具体记录可在互联网信息服务算法备案系统查询，公众也可以提交有事实依据的疑议。",
+        "这项更新连接着一套持续运行的治理制度。《互联网信息服务深度合成管理规定》要求，具有舆论属性或社会动员能力的相关服务按规定备案；同时规定了生成内容标识、投诉受理与个人信息保护等责任。"
+      ],
+      "paragraphSources": [
+        [
+          "CN3"
+        ],
+        [
+          "CN4"
+        ]
+      ],
+      "perspectives": [
+        {
+          "label": "信流观察",
+          "text": "AI越来越常出现在语音、图片和日常交流中。讨论技术能力之外，知道一项服务由谁提供、出了问题向谁反馈，同样重要。公开名录让这些问题多了一个可追溯的起点；服务体验与实际表现，还要在具体使用场景中继续比较。",
+          "sourceIds": []
+        }
+      ],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "CN3",
+          "publisher": "国家网信办",
+          "title": "国家互联网信息办公室关于发布第十九批深度合成服务算法备案信息的公告",
+          "url": "https://www.cac.gov.cn/2026-10/30/c_1795114304542687.htm",
+          "publishedAt": "2026-10-30",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "原始公告与清单入口；正文未依据附件写企业数量。"
+        },
+        {
+          "id": "CN4",
+          "publisher": "国家网信办、工信部、公安部",
+          "title": "互联网信息服务深度合成管理规定",
+          "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm",
+          "publishedAt": "2022-12-11",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "制度背景；2023年1月10日起施行。"
+        }
+      ],
+      "eventDate": "2026-10-30",
+      "freshness": "昨日更新",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-world-ai",
+      "section": "ai",
+      "region": "国际",
+      "title": "允许被搜索，也可以对AI训练说不",
+      "summary": "微软将AI训练与生成回答引用内容的偏好分开。网站可分别表达选择，并保留进入传统Bing搜索结果的资格；新设置计划明年2月开始执行。",
+      "paragraphs": [
+        "微软10月30日宣布，将为网站提供彼此独立的AI训练与回答引用偏好。前者决定内容能否用于改变生成模型的参数，后者关乎生成回答时能否把网页作为参考。网站可以允许一种用途，同时拒绝另一种。",
+        "按公告，微软将从2027年2月1日起，在重新抓取网页时执行新偏好。训练偏好可覆盖网站或路径，也能在单页设置；回答引用偏好按页面表达。对于继续希望出现在传统Bing搜索中的网站，这些选择不会单独改变其搜索资格。",
+        "训练偏好的共同语法来自仍在推进的技术讨论。微软链接的IETF记录，列出的是10月30日更新的个人Internet-Draft，尚非正式标准。 从“让爬虫进不进来”，走向“内容可以怎样使用”，出版者与AI平台之间的边界正在变得更细。设置本身也不会带来付款安排或流量承诺。"
+      ],
+      "paragraphSources": [
+        [
+          "A1"
+        ],
+        [
+          "A1"
+        ],
+        [
+          "A2",
+          "A1"
+        ]
+      ],
+      "perspectives": [],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "A1",
+          "publisher": "Microsoft Bing Blog",
+          "title": "Your content, your choice: clearer preferences for training and grounding",
+          "url": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+          "publishedAt": "2026-10-30",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "微软公布的内容使用偏好政策；计划2027年2月开始执行。"
+        },
+        {
+          "id": "A2",
+          "publisher": "IETF Datatracker",
+          "title": "Machine-Readable Training Preference Signal，draft-kelley-aipref-training-preference-signal-00",
+          "url": "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/",
+          "publishedAt": "2026-10-30",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "个人Internet-Draft，仍处于草案阶段。"
+        }
+      ],
+      "eventDate": "2026-10-30",
+      "freshness": "昨日更新",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-cn-society",
+      "section": "society",
+      "region": "中国",
+      "title": "周末雨雪铺开，把天气留一点位置",
+      "summary": "冷空气与降水相遇，青藏高原仍有强降雪，湖北、湖南、重庆局地将出现短时强降水。周末出行，山地与城市需要留意不同风险。",
+      "paragraphs": [
+        "中央气象台今晨预报，冷空气今明两天影响我国大部，南岭以北多地将先后降温4至8摄氏度，江南局地降温超过10摄氏度。青藏高原中东部有雨雪，西藏南部高海拔地区仍可能出现强降雪；重庆、湖北、湖南、安徽部分地区有大雨或暴雨。",
+        "10时发布的强对流预报进一步指出，今天14时至明天8时，湖北西部、湖南北部、重庆东北部局地预计有短时强降水，小时雨量20至30毫米。气象部门提示关注山洪、泥石流和城市积水等次生风险。"
+      ],
+      "paragraphSources": [
+        [
+          "CN5"
+        ],
+        [
+          "CN6"
+        ]
+      ],
+      "perspectives": [
+        {
+          "label": "信流观察",
+          "text": "同一场降水，落在高山、公路和城区，会成为不同的出行条件。周末安排不妨留些余地：山地行程先看当地预警，驾车提前核对路况，户外活动给天气变化留出调整时间。预报范围内的每个地点，也应以临近更新为准。",
+          "sourceIds": []
+        }
+      ],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "CN5",
+          "publisher": "中央气象台",
+          "title": "天气公报",
+          "url": "https://www.nmc.cn/publish/weather-bulletin/index.htm",
+          "publishedAt": "2026-10-31",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "引用2026年10月31日08:00版本；该产品页会随预报滚动更新。"
+        },
+        {
+          "id": "CN6",
+          "publisher": "中央气象台",
+          "title": "强对流天气预报",
+          "url": "https://www.nmc.cn/publish/stweather/tqgb/index.html",
+          "publishedAt": "2026-10-31",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "引用2026年10月31日10:00版本；该产品页会随预报滚动更新。"
+        }
+      ],
+      "eventDate": "2026-10-31",
+      "freshness": "今日天气",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-world-society",
+      "section": "society",
+      "region": "国际",
+      "title": "让自然回来，需要的比一场植树更多",
+      "summary": "联合国新报告记录，149个国家约2.52亿公顷生态系统正在修复。陆地进展较快，河流、湿地与海岸仍显薄弱，长期资金和社区参与成为关键。",
+      "paragraphs": [
+        "10月29日，粮农组织、联合国环境署与《生物多样性公约》秘书处联合发布生态修复进展报告。报告记录，149个国家约2.52亿公顷土地与水域正在开展修复。这个数字描述的是进行中的行动，不是已经恢复如初的自然。",
+        "修复的脚步并不整齐。报告显示，陆地推进较快，淡水、海洋与沿海生态系统相对落后；水域监测较弱，也使部分行动可能没有被充分记录。保护一片湿地，既需要适当的工程，也离不开持续的水文、生境与物种观察。",
+        "发布方估计，要满足2030年的修复需要，年度资金需由640亿美元增至2960亿美元。报告也把土地权属、原住民领导和社区参与放在长期成效的核心位置。自然恢复有自己的时间，项目结束后是否还有资金、照料与当地人的支持，往往比一时的面积数字更重要。"
+      ],
+      "paragraphSources": [
+        [
+          "S1"
+        ],
+        [
+          "S1",
+          "S2"
+        ],
+        [
+          "S1",
+          "S2"
+        ]
+      ],
+      "perspectives": [],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "S1",
+          "publisher": "UNEP",
+          "title": "Nature is making a comeback, but the world must move faster to meet restoration targets – UN Report",
+          "url": "https://www.unep.org/en/news-and-stories/press-release/nature-making-comeback-world-must-move-faster-meet-restoration",
+          "publishedAt": "2026-10-29",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": ""
+        },
+        {
+          "id": "S2",
+          "publisher": "UNEP知识仓库",
+          "title": "Restoration Progress Report: Nature’s comeback",
+          "url": "https://wedocs.unep.org/items/84e14d66-5e30-4e56-b33d-0a5420454d5a",
+          "publishedAt": "2026-10-21",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "本期阅读报告元数据与官方摘要。"
+        }
+      ],
+      "eventDate": "2026-10-29",
+      "freshness": "近期报告",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-cn-arts",
+      "section": "arts",
+      "region": "中国",
+      "title": "从一块玉到一段历史，前海迎来新的看展窗口",
+      "summary": "前海博物馆的通史与玉器两展，让遥远年代里的器物，来到湾区的日常生活旁边。",
+      "paragraphs": [
+        "按馆方公布的开放安排，前海博物馆自10月30日14时向公众开放。“简明中国古代通史陈列”由中国国家博物馆与深圳博物馆共同主办，位于2楼2A至2B展厅。它是常设陈列，其中部分文物只展至2027年1月3日。",
+        "同期开启的“瑶光映世——中国古代玉器”精选429件（套）作品，从远古到晚清，以六个单元呈现玉器的变化。良渚玉璧、唐代梳背、宋代投龙玉简等，分别留下了礼仪、审美与生活的痕迹；展览设在B2层，计划持续至2027年9月30日。"
+      ],
+      "paragraphSources": [
+        [
+          "CN7"
+        ],
+        [
+          "CN8"
+        ]
+      ],
+      "perspectives": [
+        {
+          "label": "信流观察",
+          "text": "看通史，可以顺着年代走；看一类器物，也可以沿着材料与用途慢慢读。一块玉如何从礼器变成日常珍玩，既是工艺的变化，也是人与物关系的变化。新场馆的意义，或许就藏在这些能反复走近的细节里。",
+          "sourceIds": []
+        }
+      ],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "CN7",
+          "publisher": "中国国家博物馆",
+          "title": "国博巡展｜“简明中国古代通史陈列”将在前海博物馆面向公众开放",
+          "url": "https://www.chnmuseum.cn/zx/gbxw/202610/t20261021_283200.shtml",
+          "publishedAt": "2026-10-21",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "主办方10月21日公布的展览与开放安排。"
+        },
+        {
+          "id": "CN8",
+          "publisher": "中国国家博物馆",
+          "title": "国博巡展｜“瑶光映世——中国古代玉器”将在前海博物馆面向公众开放",
+          "url": "https://www.chnmuseum.cn/zx/gbxw/202610/t20261021_283198.shtml",
+          "publishedAt": "2026-10-21",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "主办方10月21日公布的展览与开放安排。"
+        }
+      ],
+      "eventDate": "2026-10-30",
+      "freshness": "新展",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-world-arts",
+      "section": "arts",
+      "region": "国际",
+      "title": "文物回家之后，故事仍要接着讲",
+      "summary": "UNESCO介绍南共市文化财产返还研讨成果：15个国家在2015至2023年报告收回逾3.7万件文物。追索、归还与归还后的保存，需要多部门共同接力。",
+      "paragraphs": [
+        "UNESCO10月30日介绍，南共市代表与文物保护专家于10月6日至7日在乌拉圭蒙得维的亚交流文化财产返还经验。会上介绍的比较研究，汇集了拉丁美洲和加勒比15个国家的情况：2015至2023年，这些国家报告收回超过3.7万件文化物品。",
+        "一件文物从市场回到原来的社会，并不只有“找到”和“归还”两个步骤。研究建议更新法律框架、完善物品档案与保存条件，加强海关、警方、外交与博物馆之间的信息衔接，也关注拍卖行和网络平台。追回之后如何保管、研究和展示，同样属于归还的过程。",
+        "1970年公约提供了打击文化财产非法进出口与转移的国际合作框架。 对普通观众而言，展签上的年代与作者之外，来源和流转经历也值得一看：它们解释的不只是物品属于哪里，也关乎一段历史由谁讲述。"
+      ],
+      "paragraphSources": [
+        [
+          "C1"
+        ],
+        [
+          "C1"
+        ],
+        [
+          "C2"
+        ]
+      ],
+      "perspectives": [],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "C1",
+          "publisher": "UNESCO",
+          "title": "UNESCO shares good practices and recommendations with MERCOSUR countries to strengthen cultural heritage restitution processes",
+          "url": "https://www.unesco.org/en/articles/unesco-shares-good-practices-and-recommendations-mercosur-countries-strengthen-cultural-heritage",
+          "publishedAt": "2026-10-30",
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "官方研究介绍；观察期2015—2023年，全文计划11月公开。"
+        },
+        {
+          "id": "C2",
+          "publisher": "UNESCO",
+          "title": "Fight Illicit Trafficking of Cultural Property",
+          "url": "https://www.unesco.org/en/fight-illicit-trafficking",
+          "publishedAt": null,
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "1970年公约及文化财产合作的背景资料。"
+        }
+      ],
+      "eventDate": "2026-10-30",
+      "freshness": "昨日发布",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      }
+    },
+    {
+      "id": "20261031-city-bergen",
+      "section": "city",
+      "region": "挪威",
+      "title": "卑尔根：把山海写进日常",
+      "summary": "在挪威西海岸，彩色木屋沿港口排开，山路从街巷背后升起。卑尔根把海产贸易的往事、鱼汤的热气和林间步道，放在同一座城市里。",
+      "paragraphs": [
+        "卑尔根的故事，可以从布吕根的木屋读起。面向水面的山墙一幢挨着一幢，狭长通道伸向屋后。这里曾是汉萨同盟北欧贸易网络的一站，来自挪威北部的风干鱼沿港口流通。木屋经历过多次火灾，重建仍沿用旧有布局与传统技法。今天看见的街区，既是旧日商业的遗迹，也是一次次修补留下的时间层次。",
+        "卑尔根常被称作“七山之城”。从港湾抬头，房屋沿坡地展开，城市与山林几乎连在一起。弗勒伊恩山有步道，也有登山缆车；乌尔里肯山则是七山中的最高峰。换一个高度，海湾、岛屿与屋顶便重新组合。远行的峡湾之旅从这里出发，而近处的山路，让自然也能成为日常的一部分。",
+        "鱼是城市历史里的货物，也一直留在餐桌上。卑尔根鱼汤不是只有一种标准答案：当地餐馆介绍的传统风味带一点酸甜，用鱼骨熬底，配鱼肉、蔬菜和奶油。先喝一碗热汤，再尝当地的 skillingsbolle 肉桂卷——卷起的面团裹着肉桂、黄油与糖，既是咖啡馆里的点心，也出现在家庭烘焙和聚会中。一座港口的生活，常藏在这些熟悉的味道里。",
+        "除了码头与群山，这里还有依坡而建的木屋、窄巷、咖啡馆与商店。大学生为这座老城带来新的声音，展览与音乐又为阴雨天气准备了另一种去处。不妨把一次散步分成两半：一半留给港口与坡道，一半留给小店和室内空间。不急着把景点逐一划掉，才更容易看见山海之间的生活尺度。",
+        "雨是卑尔根常见的背景。大西洋沿岸的位置，让它的气候并不像纬度所暗示的那样严寒；云层与光线又会不断改变山海的面貌。介绍一座城市，不必替它挑出永远晴朗的一天。带上防雨外套，允许计划留一点空白，也许更接近这座城市自己的节奏。"
+      ],
+      "paragraphSources": [
+        [
+          "B1"
+        ],
+        [
+          "B2"
+        ],
+        [
+          "B3",
+          "B4"
+        ],
+        [
+          "B5"
+        ],
+        [
+          "B6"
+        ]
+      ],
+      "perspectives": [],
+      "uncertainty": "",
+      "sources": [
+        {
+          "id": "B1",
+          "publisher": "UNESCO World Heritage Centre",
+          "title": "Bryggen",
+          "url": "https://whc.unesco.org/en/list/59",
+          "publishedAt": null,
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "城市背景资料。"
+        },
+        {
+          "id": "B2",
+          "publisher": "Visit Bergen",
+          "title": "Things To Do",
+          "url": "https://en.visitbergen.com/things-to-do",
+          "publishedAt": null,
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "城市背景资料。"
+        },
+        {
+          "id": "B3",
+          "publisher": "Visit Bergen",
+          "title": "Bergen fish soup",
+          "url": "https://en.visitbergen.com/food-and-drink/bergen-city-of-gastronomy/bergen-fish-soup",
+          "publishedAt": null,
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "城市背景资料。"
+        },
+        {
+          "id": "B4",
+          "publisher": "Visit Bergen",
+          "title": "Skillingsbolle",
+          "url": "https://en.visitbergen.com/food-and-drink/bergen-city-of-gastronomy/skillingsbolle-favourite-pastry-in-Bergen",
+          "publishedAt": null,
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "城市背景资料。"
+        },
+        {
+          "id": "B5",
+          "publisher": "Visit Norway",
+          "title": "Plan your trip to Bergen",
+          "url": "https://www.visitnorway.com/places-to-go/fjord-norway/bergen/plan-your-trip/",
+          "publishedAt": null,
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "城市背景资料。"
+        },
+        {
+          "id": "B6",
+          "publisher": "Visit Bergen",
+          "title": "Bergen Weather",
+          "url": "https://en.visitbergen.com/visitor-information/bergen-weather",
+          "publishedAt": null,
+          "retrievedAt": "2026-10-31T11:02:44+08:00",
+          "sourceType": "primary",
+          "note": "城市背景资料。"
+        }
+      ],
+      "eventDate": "2026-10-31",
+      "freshness": "城市手记",
+      "updatedAt": "2026-10-31T11:02:44+08:00",
+      "aiAssisted": true,
+      "review": {
+        "status": "ai_source_checked",
+        "reviewer": null
+      },
+      "paragraphHeadings": [
+        "港口，把时间留下",
+        "城市背后，就是山",
+        "一咸一甜，认识当地",
+        "把脚步交给街巷",
+        "给天气一点余地"
+      ],
+      "city": {
+        "name": "卑尔根",
+        "englishName": "Bergen",
+        "country": "挪威",
+        "coordinates": [
+          60.39,
+          5.32
+        ]
+      },
+      "images": [
+        {
+          "src": "./assets/bergen-bryggen-pexels.jpg",
+          "width": 1280,
+          "height": 852,
+          "author": "Nguyen Ngoc Tien",
+          "sourceUrl": "https://www.pexels.com/photo/colorful-bryggen-wharf-in-bergen-norway-33973612/",
+          "license": "Pexels License",
+          "licenseUrl": "https://www.pexels.com/license/",
+          "takenAt": "2025-09-06",
+          "alt": "卑尔根布吕根码头的彩色木屋与靠岸船只，身后是绿山。",
+          "caption": "布吕根码头，木屋与船只沿港湾排开。",
+          "cropped": true
+        },
+        {
+          "src": "./assets/bergen-lake-pexels.jpg",
+          "width": 1280,
+          "height": 853,
+          "author": "Zachary Baltimore",
+          "sourceUrl": "https://www.pexels.com/photo/scenic-view-of-mount-floyen-in-bergen-norway-32129239/",
+          "license": "Pexels License",
+          "licenseUrl": "https://www.pexels.com/license/",
+          "takenAt": "资料照片",
+          "alt": "卑尔根城市湖畔的喷泉、绿地与身后的山峦。",
+          "caption": "城市湖畔，山峦就在日常生活的身后。",
+          "cropped": true
+        }
+      ]
+    }
+  ]
+}
