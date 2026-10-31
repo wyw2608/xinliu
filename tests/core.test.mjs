@@ -4,6 +4,11 @@ import {readingMinutes,selectStories,safeLoad,validIds,escapeHtml,safeSourceUrl,
 import {EDITION} from '../dist/edition.js';
 import {readFileSync,existsSync} from 'node:fs';
 const catalog=JSON.parse(readFileSync(new URL('../dist/editions/index.json',import.meta.url),'utf8'));
+test('reader startup controls exist in the published page shell',()=>{
+  const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8'),app=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
+  const dynamic=new Set(['mark-read','reader-save','reader-sources']);
+  for(const [,id] of app.matchAll(/\$\('([^']+)'\)/g))if(!dynamic.has(id))assert.ok(html.includes(`id="${id}"`),`missing page control: ${id}`);
+});
 
 test('today has eight news stories and one sourced city with licensed local photos',()=>{
   assert.equal(EDITION.date,catalog.latest);assert.equal(EDITION.demo,false);assert.equal(EDITION.stories.length,9);
