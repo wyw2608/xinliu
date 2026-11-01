@@ -1,0 +1,46 @@
+{
+  "city": "京都",
+  "country": "日本",
+  "verifiedAt": "2026-11-01",
+  "license": "Pexels License",
+  "licenseUrl": "https://www.pexels.com/license/",
+  "licenseVerified": true,
+  "photos": [
+    {
+      "file": "kyoto-kamogawa-pexels.jpg",
+      "width": 1280,
+      "height": 720,
+      "author": "Leongsan Tung",
+      "sourcePage": "https://www.pexels.com/photo/peaceful-kamo-river-scene-in-kyoto-japan-36784380/",
+      "downloadUrl": "https://images.pexels.com/photos/36784380/pexels-photo-36784380.jpeg?auto=compress&cs=tinysrgb&w=1280",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "capturedAt": "2025-02-06",
+      "alt": "京都鸭川、沿岸步道与两侧建筑，远处可见山峦；2025年摄。",
+      "caption": "鸭川穿过市区，两岸步道与远山把城市舒展开来。",
+      "credit": "摄影：Leongsan Tung / Pexels，2025年摄。",
+      "changes": "Pexels提供的等比压缩缩略图；未作内容修改。",
+      "downloadVerified": true,
+      "visualVerified": true
+    },
+    {
+      "file": "kyoto-garden-pexels.jpg",
+      "width": 1280,
+      "height": 1707,
+      "author": "分 八",
+      "sourcePage": "https://www.pexels.com/photo/traditional-japanese-zen-garden-in-kyoto-30979281/",
+      "downloadUrl": "https://images.pexels.com/photos/30979281/pexels-photo-30979281.jpeg?auto=compress&cs=tinysrgb&w=1280",
+      "license": "Pexels License",
+      "licenseUrl": "https://www.pexels.com/license/",
+      "capturedAt": null,
+      "alt": "京都一处庭园中的立石、树木与木构廊屋。资料照片。",
+      "caption": "庭石、树影与木构建筑，收拢了观看的尺度。",
+      "credit": "摄影：分 八 / Pexels。资料照片。",
+      "changes": "Pexels提供的等比压缩缩略图；未作内容修改。",
+      "downloadVerified": true,
+      "visualVerified": true,
+      "editorNote": "详情页地点为Kyoto, Japan。未核实具体庭园，不标为龙安寺；2025-03-03是上传日期，不能当作拍摄日期。"
+    }
+  ],
+  "licenseNotes": "具体详情页均显示Free download / Free to use，地点明确为京都。Pexels官方许可允许免费在网站和应用中使用、可修改；不强制署名，本项目保留作者、来源与许可。不得暗示图中人物或品牌为信流背书，亦不作图库转售或商标使用。"
+}

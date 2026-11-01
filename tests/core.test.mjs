@@ -25,26 +25,26 @@ test('today has eight news stories and one sourced city with licensed local phot
     for(const refs of [...s.paragraphSources,...s.perspectives.map(p=>p.sourceIds)])assert.ok(refs.every(id=>ids.has(id)));
     for(const src of s.sources){assert.equal(src.sourceType,'primary');assert.ok(safeSourceUrl(src.url));assert.ok(!src.url.includes('example.org'));assert.ok(src.retrievedAt);}
   }
-  const city=EDITION.stories.find(s=>s.section==='city');assert.equal(city.city.englishName,'Bergen');assert.equal(city.images.length,2);
+  const city=EDITION.stories.find(s=>s.section==='city');assert.ok(city.city.englishName&&city.city.name&&city.city.country);assert.equal(city.images.length,2);
   for(const image of city.images){assert.ok(safeImagePath(image.src));assert.ok(existsSync(new URL('../dist/'+image.src,import.meta.url)));assert.ok(image.author&&image.alt&&image.license&&safeSourceUrl(image.sourceUrl)&&safeSourceUrl(image.licenseUrl));}
   assert.ok(readingMinutes(EDITION.stories)>1);
 });
 test('category, query, unread and saved filters compose',()=>{
   const stories=EDITION.stories;
   assert.equal(selectStories(stories,{category:'ai'}).length,2);
-  assert.equal(selectStories(stories,{query:'十月制造业景气回落'}).length,1);
+  assert.equal(selectStories(stories,{query:stories[0].title}).length,1);
   assert.equal(selectStories(stories,{category:'ai',savedOnly:true,savedIds:[stories[2].id]}).length,1);
   assert.equal(selectStories(stories,{category:'ai',savedOnly:true,savedIds:[stories[2].id],unread:true,readIds:[stories[2].id]}).length,0);
   assert.equal(selectStories(stories,{query:'不存在的关键词'}).length,0);
 });
 test('date selection only opens published snapshots and preserves the previous edition',()=>{
-  for(const item of catalog.editions){assert.ok(editionEntry(catalog,item.date));const data=JSON.parse(readFileSync(new URL('../dist/'+item.path,import.meta.url),'utf8'));assert.equal(data.date,item.date);assert.equal(data.issueNumber,item.issueNumber);}
+  for(const item of catalog.editions){assert.ok(editionEntry(catalog,item.date));const data=JSON.parse(readFileSync(new URL('../dist/'+item.path,import.meta.url),'utf8'));assert.equal(data.date,item.date);assert.equal(data.issueNumber,item.issueNumber);if(item.date===catalog.latest)assert.deepEqual(data,EDITION);for(const story of data.stories)for(const image of story.images||[])assert.ok(existsSync(new URL('../dist/'+image.src,import.meta.url)),`missing archived image: ${image.src}`);}
   const old=JSON.parse(readFileSync(new URL('../dist/editions/2026-10-30.json',import.meta.url),'utf8'));assert.equal(old.stories.length,8);assert.equal(old.stories[0].id,'20261030-policy-ai-work');
-  assert.equal(editionEntry(catalog,'2026-11-01'),null);assert.equal(editionEntry(catalog,'../../README.md'),null);assert.equal(editionEntry({editions:[{date:'2026-10-31',path:'https://example.org/'}]},'2026-10-31'),null);
+  assert.equal(editionEntry(catalog,'2999-12-31'),null);assert.equal(editionEntry(catalog,'../../README.md'),null);assert.equal(editionEntry({editions:[{date:'2026-10-31',path:'https://example.org/'}]},'2026-10-31'),null);
 });
 test('reading and saved records stay separate across dates',()=>{
-  const id=EDITION.stories[0].id,stored={editions:{'2026-10-31':{readIds:[id],savedIds:[id]},'2026-10-30':{readIds:['yesterday']}}};
-  assert.deepEqual(readingState(stored,'2026-10-31',EDITION.stories),{readIds:[id],savedIds:[id]});assert.deepEqual(readingState(stored,'2026-10-30',EDITION.stories),{readIds:[],savedIds:[]});assert.deepEqual(readingState(null,'unknown',EDITION.stories),{readIds:[],savedIds:[]});
+  const id=EDITION.stories[0].id,stored={editions:{[EDITION.date]:{readIds:[id],savedIds:[id]},'2000-01-01':{readIds:['yesterday']}}};
+  assert.deepEqual(readingState(stored,EDITION.date,EDITION.stories),{readIds:[id],savedIds:[id]});assert.deepEqual(readingState(stored,'2000-01-01',EDITION.stories),{readIds:[],savedIds:[]});assert.deepEqual(readingState(null,'unknown',EDITION.stories),{readIds:[],savedIds:[]});
 });
 test('photos cannot load from remote tracking endpoints or arbitrary paths',()=>{assert.equal(safeImagePath('https://example.org/pixel.jpg'),null);assert.equal(safeImagePath('./assets/../../secret.jpg'),null);assert.equal(safeImagePath('data:image/png;base64,abc'),null);});
 test('unknown and malformed persisted ids cannot distort progress',()=>{
